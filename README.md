@@ -142,6 +142,10 @@ slide-studio/                 ตัว Skill (ส่วนที่ถูกค
 docs/                         ภาพประกอบ README
 ```
 
+## License
+
+[MIT](LICENSE) © 2026 Surasak P. ส่วนประกอบจากภายนอกที่รวมไว้ใช้สัญญาอนุญาตของตัวเอง (ด้านล่าง)
+
 ## Third-party
 
 - **html-ppt** runtime (`assets/runtime/`): MIT License, ดู `slide-studio/assets/runtime/html-ppt-LICENSE.txt`
