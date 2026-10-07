@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/animations.css">
+<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/studio.css">
+<style>
+  /* deck-only additions go here; shared layout lives in assets/studio.css */
+</style>
+</head>
+<body class="ss" data-page-label="{{PAGE_LABEL}}">
+<div class="deck">
+
+  <!-- ============ 1 COVER ============ -->
+  <section class="slide cover" data-title="{{COVER_TITLE}}" data-min="1">
+    {{COVER_LOGO}}
+    <div class="course">{{EYEBROW}}</div>
+    <h1>{{TITLE}}</h1>
+    <p class="sub">{{SUBTITLE}}</p>
+    <ul class="msgs">
+      <li>key message 1</li>
+      <li>key message 2</li>
+      <li>key message 3</li>
+      <li>key message 4</li>
+    </ul>
+    <div class="meta"><span>{{FOOTER}}</span>{{COVER_PARTNER}}</div>
+    <aside class="notes"><p>...</p></aside>
+  </section>
+
+  <!-- ============ 2 CONTENT (copy this block per slide) ============ -->
+  <section class="slide" data-title="short title" data-min="3">
+    <div class="top"><p class="kicker">1 · section</p><div class="prog"><span class="on">section 1</span><span>section 2</span></div></div>
+    <h2 class="title">Action title that states the conclusion</h2>
+    <p class="lead">One line of context.</p>
+    <hr class="rule">
+    <div class="body">
+      <p>content</p>
+      <div class="take"><span class="lbl">{{TAKE_LABEL}}</span><span>One takeaway sentence with <b>one bold phrase</b>.</span></div>
+    </div>
+    <div class="foot"><span>{{FOOTER}}</span><span class="pg"></span></div>
+    <aside class="notes"><p>speaker script</p></aside>
+  </section>
+
+</div>
+<script src="assets/studio.js"></script>
+<script src="assets/runtime.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "name": "emerald-gold",
+  "label": "Emerald & Gold",
+  "mood": "สุขุม น่าเชื่อถือ พรีเมียม",
+  "fit": "โรงพยาบาล ธุรกิจบริการพรีเมียม หลักสูตรอบรมองค์กร",
+  "colors": {
+    "surface": "#FFFFFF",
+    "on_brand": "#FFFFFF",
+    "on_accent": "#FFFFFF",
+    "on_hl": "#FFFFFF",
+    "good": "#1E6B3A",
+    "warn": "#B7791F",
+    "bad": "#9A3B1E",
+    "brand": "#214139",
+    "brand2": "#275148",
+    "accent": "#357A63",
+    "hl": "#B18E50",
+    "hl_dk": "#8C6B32",
+    "hl_lt": "#D9BE86",
+    "tint": "#E3EFE9",
+    "tint_border": "#B5D0C3",
+    "hl_tint": "#F7F1E5",
+    "hl_border": "#DCCBA4",
+    "ink": "#1F2A27",
+    "muted": "#4F5B57",
+    "soft": "#7D8A85",
+    "line": "#D3DCD8",
+    "paper": "#FDFDFB",
+    "grey": "#F4F4F4",
+    "row_alt": "#F6F9F7",
+    "on_brand_2": "#C8DCD3",
+    "on_brand_rule": "#4C7466",
+    "backdrop": "#1A2E29"
+  },
+  "fonts": {
+    "sans": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "display": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "mono": "Consolas, 'Cascadia Mono', monospace",
+    "bundled": "sarabun",
+    "google": null
+  },
+  "logos": {
+    "main": null,
+    "main_dark": null,
+    "partner": null,
+    "partner_dark": null
+  }
+}

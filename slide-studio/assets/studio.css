@@ -1,0 +1,210 @@
+/* slide-studio layout for html-ppt decks (1920x1080 canvas).
+   Layout only: every colour, font and logo comes from theme.css (generated from
+   themes/<name>.json by scripts/make_theme.py). Swap the theme, keep the layout.
+
+   Page pattern: kicker + section chips, an action title that states the conclusion,
+   one lead line, a rule, the content, and one .take strip pinned to the bottom.
+   The footer rule sits 92px above the slide bottom; nothing may cross it. */
+
+body{background:var(--backdrop)}
+.deck{background:var(--paper)}
+
+/* ---------- slide frame ---------- */
+.ss .slide{padding:64px 96px 118px;justify-content:flex-start;gap:0;font-size:26px;line-height:1.5;color:var(--ink);font-family:var(--font-sans)}
+.ss .slide::after{content:"";position:absolute;left:96px;right:96px;bottom:92px;border-top:1.5px solid var(--line)}
+.ss .foot{position:absolute;left:96px;right:96px;bottom:34px;height:48px;display:flex;align-items:center;justify-content:space-between;
+  font-size:19px;color:var(--muted);padding-left:var(--logo-pad);background:var(--logo) no-repeat left center/auto 44px}
+.ss .foot .pg{font-size:19px;color:var(--muted);display:flex;align-items:center;gap:16px}
+.ss .foot .pg::after{content:"";width:var(--logo2-w);height:42px;background:var(--logo2) no-repeat center/contain}
+
+.ss .top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+.ss .kicker{margin:0;color:var(--accent);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:none;font-family:var(--font-sans)}
+.ss .prog{display:flex;gap:8px;flex:0 0 auto}
+.ss .prog span{font-size:17px;color:var(--muted);background:var(--grey);border-radius:6px;padding:3px 14px;white-space:nowrap}
+.ss .prog span.on{background:var(--brand);color:var(--on-brand);font-weight:700}
+.ss h2.title{margin:10px 0 0;color:var(--brand);font-size:50px;line-height:1.22;font-weight:700;max-width:1640px;font-family:var(--font-display)}
+.ss .lead{margin:12px 0 0;color:var(--muted);font-size:27px;line-height:1.45;max-width:1600px}
+.ss .rule{border:0;border-top:3px solid var(--hl);margin:22px 0 30px;width:100%}
+.ss .body{flex:1;min-height:0;display:flex;flex-direction:column;gap:26px}
+.ss .body > .take:last-child{margin-top:auto}
+
+/* ---------- content primitives ---------- */
+.ss h3{margin:0 0 6px;color:var(--brand);font-size:29px;line-height:1.3}
+.ss p{margin:0}
+.ss ul{margin:0;padding-left:30px} .ss li{margin-bottom:8px}
+.ss li::marker{color:var(--hl)}
+.ss .small{font-size:22px;color:var(--muted)}
+.ss b{color:var(--brand)}
+.ss .row{display:flex;gap:28px;align-items:stretch}
+.ss .row.top-al{align-items:flex-start}
+.ss .col{flex:1;min-width:0}
+.ss .card{border:1.5px solid var(--line);border-radius:14px;padding:22px 26px;background:var(--surface);box-shadow:none}
+.ss .card.tint{background:var(--tint);border-color:var(--tint-border)}
+.ss .card.hl{background:var(--hl-tint);border-color:var(--hl-border)}
+.ss .card.brand{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.ss .card.brand h3,.ss .card.brand b{color:var(--on-brand)}
+.ss .card.brand .small{color:var(--on-brand-2)}
+.ss .num{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--hl);color:var(--on-hl);font-weight:700;font-size:24px;margin-right:12px;flex:0 0 auto}
+.ss .tag{display:inline-block;padding:2px 14px;border-radius:8px;background:var(--tint);color:var(--brand);font-size:20px;font-weight:700;margin:3px 6px 3px 0}
+.ss .tag.hl{background:var(--hl-tint);color:var(--hl-dk);border:1px solid var(--hl-border)}
+.ss .tag.brand{background:var(--brand);color:var(--on-brand)}
+.ss .quote{font-size:34px;color:var(--brand);font-weight:700;line-height:1.35}
+
+/* tables: .big for 5-6 row tables that must read from the back of the room */
+.ss table{width:100%;border-collapse:collapse;font-size:23px}
+.ss th{background:var(--accent);color:var(--on-accent);text-align:left;padding:12px 18px;font-weight:700}
+.ss td{border-bottom:1.5px solid var(--line);padding:11px 18px;vertical-align:top}
+.ss tr:nth-child(even) td{background:var(--row-alt)}
+.ss td b{color:var(--brand)}
+.ss td.c,.ss th.c{text-align:center} .ss td.r,.ss th.r{text-align:right}
+.ss table.big{font-size:26px} .ss table.big td{padding:14px 18px}
+.ss table.big.tight td{padding:9px 18px}
+/* group band inside a table: <tr><td colspan="3" class="band">...</td></tr> */
+.ss td.band{background:var(--tint)!important;color:var(--brand);font-weight:700}
+
+/* three numbered principles, separated by rules */
+.ss .principles{display:flex}
+.ss .principles > div{flex:1;padding:0 36px;border-left:1.5px solid var(--line)}
+.ss .principles > div:first-child{padding-left:0;border-left:0}
+.ss .principles .n{font-size:64px;font-weight:700;color:var(--hl);line-height:1}
+.ss .principles h3{margin:10px 0 6px}
+.ss .principles p{font-size:24px;color:var(--muted)}
+
+/* numbered cards on a grid: .objs = 2 columns, .cases = 3 columns */
+.ss .objs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.ss .objs .card{display:flex;gap:18px;align-items:flex-start;padding:30px 34px}
+.ss .objs .card.wide{grid-column:1 / -1}
+.ss .objs h3{font-size:31px} .ss .objs p.small{font-size:25px;line-height:1.55}
+.ss .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.ss .cases .card{display:flex;flex-direction:column;gap:18px;padding:30px 32px;min-height:300px}
+.ss .cases .hd{display:flex;align-items:center;gap:12px}
+.ss .cases .hd .num,.ss .cases .hd .tag{margin:0}
+.ss .cases p.sit{font-size:30px;line-height:1.5;color:var(--ink)}
+
+/* KPI tiles: <div class="kpis"><div><span class="k">ยอดขาย</span><b>42.5</b><span class="u">ล้านบาท</span><span class="d up">+8%</span></div>...</div> */
+.ss .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:24px}
+.ss .kpis > div{background:var(--surface);border:1.5px solid var(--line);border-top:6px solid var(--accent);border-radius:14px;padding:22px 26px;display:flex;flex-direction:column;gap:4px}
+.ss .kpis > div.focus{border-top-color:var(--hl);background:var(--hl-tint)}
+.ss .kpis .k{font-size:22px;color:var(--muted);font-weight:600}
+.ss .kpis b{font-size:64px;line-height:1.1;color:var(--brand);font-weight:700}
+.ss .kpis .u{font-size:21px;color:var(--muted)}
+.ss .kpis .d{font-size:22px;font-weight:700} .ss .d.up{color:var(--good)} .ss .d.down{color:var(--bad)} .ss .d.flat{color:var(--muted)}
+
+/* RAG status dot: <span class="rag g">On track</span> (g / a / r / n) */
+.ss .rag{display:inline-flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
+.ss .rag::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--muted)}
+.ss .rag.g{color:var(--good)} .ss .rag.g::before{background:var(--good)}
+.ss .rag.a{color:var(--warn)} .ss .rag.a::before{background:var(--warn)}
+.ss .rag.r{color:var(--bad)}  .ss .rag.r::before{background:var(--bad)}
+.ss .rag.n{color:var(--muted)}
+
+/* phase strip (plan / roadmap): <div class="phases"><div class="done">...</div><div class="now">...</div><div>...</div></div> */
+.ss .phases{display:flex;gap:0}
+.ss .phases > div{flex:1;position:relative;padding:26px 30px 26px 46px;background:var(--grey);color:var(--ink);clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%,26px 50%)}
+.ss .phases > div:first-child{padding-left:30px;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%)}
+.ss .phases > div.done{background:var(--tint)}
+.ss .phases > div.now{background:var(--brand);color:var(--on-brand)}
+.ss .phases > div.now h3,.ss .phases > div.now .small{color:var(--on-brand)}
+.ss .phases h3{font-size:27px;margin:0 0 4px} .ss .phases .small{font-size:21px}
+
+/* before / after or option comparison with a winner column */
+.ss .compare{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ss .compare > div{border:1.5px solid var(--line);border-radius:14px;padding:26px 30px;background:var(--surface)}
+.ss .compare > div.win{border:2.5px solid var(--hl);background:var(--hl-tint)}
+.ss .compare .hd{font-size:22px;font-weight:700;color:var(--muted);text-transform:none;margin-bottom:8px}
+
+/* price / commercial table: right-aligned numbers, total row */
+.ss table.price td.r{font-variant-numeric:tabular-nums}
+.ss table.price tr.total td{border-top:3px solid var(--brand);font-weight:700;color:var(--brand);background:var(--surface)}
+
+/* checklist */
+.ss .ck{list-style:none;padding:0;margin:0}
+.ss .ck li{position:relative;padding:13px 0 13px 42px;border-bottom:1px dotted var(--line);margin:0;font-size:26px}
+.ss .ck li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border:2px solid var(--brand);border-radius:4px}
+
+/* takeaway strip, one per slide, pinned to the bottom */
+.ss .take{display:flex;gap:22px;align-items:center;background:var(--hl-tint);border:1.5px solid var(--hl-border);border-radius:14px;padding:18px 26px;font-size:27px}
+.ss .take .lbl{flex:0 0 auto;background:var(--brand);color:var(--on-brand);font-weight:700;font-size:21px;border-radius:8px;padding:5px 16px}
+
+/* diagrams: generated by diagrams.py; .dg keeps flexbox from shrinking them */
+.ss .dg{flex-shrink:0;width:100%;height:auto;display:block}
+.ss .dgwrap{flex:1;min-height:0;position:relative}
+.ss .dgwrap.fix{flex:0 0 auto}
+.ss .dgwrap > svg.dg{position:absolute;inset:0;width:100%!important;height:100%!important}
+
+/* ---------- cover ---------- */
+.ss .slide.cover{background:var(--brand);color:var(--on-brand);padding:96px 120px 80px;border-top:18px solid var(--hl)}
+.ss .slide.cover::after{display:none}
+.ss .cover .logo{height:84px;width:auto;align-self:flex-start}
+.ss .cover .course{margin-top:28px;color:var(--hl-lt);font-weight:700;font-size:26px}
+.ss .cover h1{margin:72px 0 10px;color:var(--on-brand);font-size:92px;line-height:1.12;font-weight:700;font-family:var(--font-display)}
+.ss .cover .sub{font-size:34px;color:var(--on-brand-2);max-width:1500px}
+.ss .cover .msgs{margin:auto 0 0;padding:0;list-style:none;counter-reset:m;display:grid;grid-template-columns:1fr 1fr;gap:18px 60px;max-width:1680px}
+.ss .cover .msgs li{position:relative;padding-left:58px;font-size:27px;color:var(--on-brand);margin:0}
+.ss .cover .msgs li::before{counter-increment:m;content:counter(m);position:absolute;left:0;top:2px;width:40px;height:40px;border-radius:50%;background:var(--hl-lt);color:var(--brand);font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center}
+.ss .cover .meta{margin-top:44px;display:flex;justify-content:space-between;align-items:center;border-top:1.5px solid var(--on-brand-rule);padding-top:22px;color:var(--on-brand-2);font-size:23px}
+.ss .cover .meta img{height:62px;width:auto;display:block}
+
+/* ---------- section divider ---------- */
+.ss .slide.section{background:var(--brand-2);color:var(--on-brand);justify-content:center;padding:96px 140px}
+.ss .slide.section::after{display:none}
+.ss .section .no{font-size:150px;font-weight:700;color:var(--hl-lt);line-height:1}
+.ss .section h2{margin:16px 0 18px;font-size:76px;color:var(--on-brand);line-height:1.2;font-family:var(--font-display)}
+.ss .section p{font-size:32px;color:var(--on-brand-2);max-width:1400px}
+.ss .section .ref{margin-top:46px;display:inline-flex;gap:18px;align-items:center;font-size:26px;color:var(--hl-lt);border:1.5px solid var(--on-brand-rule);border-radius:10px;padding:8px 22px;align-self:flex-start}
+.ss .slide.section .foot,.ss .slide.cover .foot{color:var(--on-brand-2);background-image:var(--logo-dark)}
+.ss .slide.section .foot .pg,.ss .slide.cover .foot .pg{color:var(--on-brand-2)}
+.ss .slide.section .foot .pg::after,.ss .slide.cover .foot .pg::after{background-image:var(--logo2-dark)}
+
+/* ---------- agenda ---------- */
+.ss .agenda{display:grid;grid-template-columns:110px 1fr 160px;font-size:26px}
+.ss .agenda > div{padding:13px 0;border-bottom:1.5px solid var(--line);display:flex;align-items:center}
+.ss .agenda .t{color:var(--accent);font-weight:700}
+.ss .agenda .d{justify-content:flex-end;color:var(--muted);font-size:22px}
+.ss .agenda .hl{color:var(--hl-dk);font-weight:700}
+.ss .agenda .dim{color:var(--soft)}
+.ss .agenda2{display:flex;gap:64px} .ss .agenda2 > div{flex:1}
+.ss .agenda2 h3{font-size:26px;color:var(--accent);margin:0 0 4px}
+
+/* ---------- demo + lab slides (training) ---------- */
+.ss .mode{display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:700;border-radius:8px;padding:4px 16px;margin-right:12px;vertical-align:middle}
+.ss .mode.demo{background:var(--accent);color:var(--on-accent)}
+.ss .mode.lab{background:var(--hl);color:var(--on-hl)}
+.ss .steps{counter-reset:s;display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.ss .steps li{counter-increment:s;position:relative;padding:16px 22px 16px 84px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;margin:0;font-size:26px}
+.ss .steps li::before{content:counter(s);position:absolute;left:20px;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:var(--brand);color:var(--on-brand);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:23px}
+.ss .path{font-family:var(--font-mono);font-size:21px;background:var(--tint);color:var(--brand);border-radius:6px;padding:2px 10px;white-space:nowrap}
+.ss .out{border:2px dashed var(--hl);border-radius:14px;padding:18px 24px;background:var(--hl-tint)}
+.ss .out h3{font-size:25px}
+
+/* print / PDF of the deck: one slide per landscape page */
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  body{background:#fff}
+}
+
+/* ---------- added after test runs ---------- */
+/* actual-vs-target bar inside a KPI tile: <span class="meter"><i style="width:78%"></i><s style="left:80%"></s></span> */
+.ss .meter{position:relative;display:block;height:16px;border-radius:8px;background:var(--grey);margin:14px 0 6px}
+.ss .meter i{position:absolute;left:0;top:0;bottom:0;border-radius:8px;background:var(--accent)}
+.ss .focus .meter i{background:var(--hl)}
+.ss .meter s{position:absolute;top:-8px;bottom:-8px;width:4px;margin-left:-2px;background:var(--brand);border-radius:2px}
+
+/* the ask on a closing divider: <div class="opts"><div class="win"><span class="hd">A · แนะนำ</span><b>...</b>...</div><div>...</div></div> */
+.ss .section .opts{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1640px}
+.ss .section .opts > div{border:2px solid var(--on-brand-rule);border-radius:14px;padding:26px 32px;font-size:28px;line-height:1.45;color:var(--on-brand-2)}
+.ss .section .opts > div.win{border-color:var(--hl-lt)}
+.ss .section .opts b{display:block;color:var(--on-brand);font-size:34px;margin-bottom:6px}
+.ss .section .opts .hd{color:var(--hl-lt);font-weight:700;font-size:22px}
+
+/* .roomy on a <section>: scale up a sparse slide's main visual instead of leaving the body half empty */
+.ss .roomy .kpis{flex:1}
+.ss .roomy .kpis > div{padding:34px 34px 30px;gap:8px}
+.ss .roomy .kpis .k{font-size:26px} .ss .roomy .kpis b{font-size:100px} .ss .roomy .kpis .u{font-size:25px}
+.ss .roomy .kpis .d{font-size:26px;margin-top:auto}
+.ss .roomy .compare{flex:1}
+.ss .roomy .compare > div{padding:44px 50px}
+.ss .roomy .compare h3{font-size:52px;margin-bottom:28px} .ss .roomy .compare .hd{font-size:27px}
+.ss .roomy .compare li{font-size:34px;margin-bottom:26px}
+.ss .roomy table.big{font-size:30px} .ss .roomy table.big th{padding:16px 22px} .ss .roomy table.big td{padding:20px 22px}
+.ss .roomy .objs p.small{font-size:27px} .ss .roomy .principles p{font-size:27px}

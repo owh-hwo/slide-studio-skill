@@ -1,0 +1,48 @@
+{
+  "name": "burgundy-sand",
+  "label": "Burgundy & Sand",
+  "mood": "ภูมิฐาน เป็นทางการสูง",
+  "fit": "ภาครัฐ กฎหมาย การเงิน งานพิธีการ",
+  "colors": {
+    "surface": "#FFFFFF",
+    "on_brand": "#FFFFFF",
+    "on_accent": "#FFFFFF",
+    "on_hl": "#FFFFFF",
+    "good": "#1E6B3A",
+    "warn": "#B7791F",
+    "bad": "#9A3B1E",
+    "brand": "#5A1F2B",
+    "brand2": "#6B2734",
+    "accent": "#8A3A47",
+    "hl": "#A8894F",
+    "hl_dk": "#85693A",
+    "hl_lt": "#DCC497",
+    "tint": "#F3E8E9",
+    "tint_border": "#DDBEC3",
+    "hl_tint": "#F8F2E6",
+    "hl_border": "#E2D0AA",
+    "ink": "#2A1E20",
+    "muted": "#5E5254",
+    "soft": "#8C8183",
+    "line": "#E0D6D7",
+    "paper": "#FDFCFB",
+    "grey": "#F5F2F2",
+    "row_alt": "#F9F6F6",
+    "on_brand_2": "#E5C9CE",
+    "on_brand_rule": "#7E4450",
+    "backdrop": "#2E0F15"
+  },
+  "fonts": {
+    "sans": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "display": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "mono": "Consolas, 'Cascadia Mono', monospace",
+    "bundled": "sarabun",
+    "google": null
+  },
+  "logos": {
+    "main": null,
+    "main_dark": null,
+    "partner": null,
+    "partner_dark": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "teal-orange",
+  "label": "Teal & Orange",
+  "mood": "สดใส เป็นมิตร แต่ยังเป็นมืออาชีพ",
+  "fit": "รายงานสถานะโครงการ Workshop ทีมปฏิบัติการ",
+  "colors": {
+    "surface": "#FFFFFF",
+    "on_brand": "#FFFFFF",
+    "on_accent": "#FFFFFF",
+    "on_hl": "#FFFFFF",
+    "good": "#1E6B3A",
+    "warn": "#B7791F",
+    "bad": "#9A3B1E",
+    "brand": "#0E4F5C",
+    "brand2": "#12606F",
+    "accent": "#1F7A8C",
+    "hl": "#E07A2F",
+    "hl_dk": "#A9541A",
+    "hl_lt": "#F5B27C",
+    "tint": "#E1F0F2",
+    "tint_border": "#AFD3D9",
+    "hl_tint": "#FDF0E5",
+    "hl_border": "#F2C7A3",
+    "ink": "#16292E",
+    "muted": "#4A5C61",
+    "soft": "#7E8F93",
+    "line": "#D2DFE1",
+    "paper": "#FCFDFD",
+    "grey": "#F1F5F6",
+    "row_alt": "#F4F8F9",
+    "on_brand_2": "#BFDDE2",
+    "on_brand_rule": "#3C7C88",
+    "backdrop": "#0A3038"
+  },
+  "fonts": {
+    "sans": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "display": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "mono": "Consolas, 'Cascadia Mono', monospace",
+    "bundled": "sarabun",
+    "google": null
+  },
+  "logos": {
+    "main": null,
+    "main_dark": null,
+    "partner": null,
+    "partner_dark": null
+  }
+}

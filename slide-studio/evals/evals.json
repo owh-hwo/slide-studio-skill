@@ -1,0 +1,19 @@
+{
+  "skill_name": "slide-studio",
+  "evals": [
+    {
+      "id": 0,
+      "name": "status-deck-build",
+      "prompt": "ช่วยทำสไลด์รายงานสถานะโครงการ ERP ให้ Steering Committee ของบริษัท สยามฟู้ดส์ จำกัด (บริษัทสมมติ) ประชุม 30 นาที ภาษาไทย ศัพท์เทคนิคเป็นอังกฤษ ใช้ธีม navy-amber ข้อมูล ณ 30 ก.ย. 2026: ความคืบหน้ารวม 78% (แผน 80%), งบใช้ไป 55% ของ 12 ล้านบาท, UAT ผ่าน 70% (เป้า 95% ก่อน go-live), ผู้ใช้อบรมแล้ว 120 จาก 150 คน. Workstream: Finance เขียว, Supply Chain เหลือง (รอ master data จากโรงงาน 2), Integration กับระบบ POS เหลือง (vendor ส่ง API ช้า 1 สัปดาห์), Data Migration เขียว, Training เขียว. Go-live เดิม 1 ธ.ค. 2026. ขอให้ที่ประชุมตัดสินใจ: เลื่อน go-live ไป 5 ม.ค. 2027 (ทางเลือก B) หรือคงวันเดิมโดยเพิ่มทีมทดสอบ 3 คน ค่าใช้จ่ายเพิ่ม 0.4 ล้านบาท (ทางเลือก A, ทีมโครงการแนะนำ). Footer: 'สยามฟู้ดส์ · ERP Steering Committee · ทีมโครงการ'. ไม่ต้องมี handout. ต้องการ PPTX ด้วย",
+      "expected_output": "brief.md with ghost deck; ~8-11 slide navy-amber deck; cover title states status; KPI, RAG table, phases, options compare, price/decision; every content slide has one take; overflow check clean; PPTX with notes",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "interview-first-turn",
+      "prompt": "อยากได้สไลด์ proposal ขายระบบ ERP ให้ลูกค้าโรงงานผลิตชิ้นส่วนรถยนต์ ช่วยทำให้หน่อย",
+      "expected_output": "No deck is built. The first turn is ONE interview question (likely work type/audience/goal or the client's situation) with a recommended answer and reason, in Thai; mentions it checked for existing files; no stacked list of many questions",
+      "files": []
+    }
+  ]
+}

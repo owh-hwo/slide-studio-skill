@@ -1,0 +1,48 @@
+{
+  "name": "navy-amber",
+  "label": "Navy & Amber",
+  "mood": "ทางการ มั่นคง แบบบริษัทที่ปรึกษา",
+  "fit": "นำเสนอผู้บริหาร บอร์ด การเงิน Proposal",
+  "colors": {
+    "surface": "#FFFFFF",
+    "on_brand": "#FFFFFF",
+    "on_accent": "#FFFFFF",
+    "on_hl": "#FFFFFF",
+    "good": "#1E6B3A",
+    "warn": "#B7791F",
+    "bad": "#9A3B1E",
+    "brand": "#14284B",
+    "brand2": "#1C3560",
+    "accent": "#2F5D8C",
+    "hl": "#C2801F",
+    "hl_dk": "#9A6416",
+    "hl_lt": "#F2C27A",
+    "tint": "#E6EEF7",
+    "tint_border": "#B9CCE2",
+    "hl_tint": "#FBF1E2",
+    "hl_border": "#EBCB98",
+    "ink": "#1A2233",
+    "muted": "#4B5568",
+    "soft": "#7B8496",
+    "line": "#D5DBE5",
+    "paper": "#FCFCFD",
+    "grey": "#F2F4F7",
+    "row_alt": "#F5F7FA",
+    "on_brand_2": "#C5D2E6",
+    "on_brand_rule": "#3E5A85",
+    "backdrop": "#0F1D36"
+  },
+  "fonts": {
+    "sans": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "display": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "mono": "Consolas, 'Cascadia Mono', monospace",
+    "bundled": "sarabun",
+    "google": null
+  },
+  "logos": {
+    "main": null,
+    "main_dark": null,
+    "partner": null,
+    "partner_dark": null
+  }
+}

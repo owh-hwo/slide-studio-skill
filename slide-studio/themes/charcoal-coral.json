@@ -1,0 +1,48 @@
+{
+  "name": "charcoal-coral",
+  "label": "Charcoal & Coral",
+  "mood": "ทันสมัย เรียบ คม แบบบริษัทเทคโนโลยี",
+  "fit": "Pre-sales ซอฟต์แวร์ Product demo งานด้าน IT",
+  "colors": {
+    "surface": "#FFFFFF",
+    "on_brand": "#FFFFFF",
+    "on_accent": "#FFFFFF",
+    "on_hl": "#FFFFFF",
+    "good": "#1E6B3A",
+    "warn": "#B7791F",
+    "bad": "#9A3B1E",
+    "brand": "#2B2D33",
+    "brand2": "#383B43",
+    "accent": "#4F5D75",
+    "hl": "#E4683C",
+    "hl_dk": "#B4481F",
+    "hl_lt": "#F4A07F",
+    "tint": "#ECEEF2",
+    "tint_border": "#C9CED8",
+    "hl_tint": "#FDEEE7",
+    "hl_border": "#F3C2AC",
+    "ink": "#1F2024",
+    "muted": "#555A66",
+    "soft": "#888D99",
+    "line": "#DADDE3",
+    "paper": "#FBFBFA",
+    "grey": "#F2F2F3",
+    "row_alt": "#F6F6F7",
+    "on_brand_2": "#C9CCD3",
+    "on_brand_rule": "#555863",
+    "backdrop": "#18191C"
+  },
+  "fonts": {
+    "sans": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "display": "Sarabun, Tahoma, 'Leelawadee UI', sans-serif",
+    "mono": "Consolas, 'Cascadia Mono', monospace",
+    "bundled": "sarabun",
+    "google": null
+  },
+  "logos": {
+    "main": null,
+    "main_dark": null,
+    "partner": null,
+    "partner_dark": null
+  }
+}
